@@ -259,18 +259,6 @@
           "en": {
             "code": "en-US",
             "description": "English"
-          },
-          "fr": {
-            "code": "fr-FR",
-            "description": "Français"
-          },
-          "de": {
-            "code": "de-DE",
-            "description": "Deutsch"
-          },
-          "es": {
-            "code": "es-ES",
-            "description": "Español"
           }
         }
       }
@@ -389,7 +377,7 @@
       {
         "name": "Cookie",
         "cfg": {
-          "externalCookieUrl": "",
+          "externalCookieUrl": "https://www.rse-web.it/cookie/",
           "declineUrl": "http://www.google.com"
         }
       },
@@ -630,7 +618,7 @@
       {
         "name": "Cookie",
         "cfg": {
-          "externalCookieUrl": "",
+          "externalCookieUrl": "https://www.rse-web.it/cookie/",
           "declineUrl": "http://www.google.com"
         }
       },
@@ -830,6 +818,42 @@
       {
         "name": "ResourcesGrid",
         "cfg": {
+          "id": "maps",
+          "titleId": "resources.contents.mapsTitle",
+          "pageSize": 4,
+          "cardLayoutStyle": "grid",
+          "order": null,
+          "hideWithNoResults": true,
+          "resourceTypes": ["MAP"]
+        }
+      },
+      {
+        "name": "ResourcesGrid",
+        "cfg": {
+          "id": "dashboards",
+          "titleId": "resources.contents.dashboardsTitle",
+          "pageSize": 4,
+          "cardLayoutStyle": "grid",
+          "order": null,
+          "hideWithNoResults": true,
+          "resourceTypes": ["DASHBOARD"]
+        }
+      },
+      {
+        "name": "ResourcesGrid",
+        "cfg": {
+          "id": "geostories",
+          "titleId": "resources.contents.geostoriesTitle",
+          "pageSize": 4,
+          "cardLayoutStyle": "grid",
+          "order": null,
+          "hideWithNoResults": true,
+          "resourceTypes": ["GEOSTORY"]
+        }
+      },
+      {
+        "name": "ResourcesGrid",
+        "cfg": {
           "id": "catalog",
           "titleId": "resources.contents.title",
           "queryPage": true,
@@ -928,12 +952,25 @@
           }
         }
       },
-      { "name": "Footer" },
-      { "name": "About" },
+      {
+        "name": "Footer",
+        "cfg": {
+          "hideMenuItems": true,
+          "customFooter": true,
+          "customFooterMessageId": "custom.footer.html"
+        }
+      },
+      {
+        "name": "About",
+        "cfg": {
+          "showVersionInfo": false,
+          "showAboutContent": true
+        }
+      },
       {
         "name": "Cookie",
         "cfg": {
-          "externalCookieUrl": "",
+          "externalCookieUrl": "https://www.rse-web.it/cookie/",
           "declineUrl": "http://www.google.com"
         }
       }

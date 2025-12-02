@@ -14,16 +14,48 @@ class About extends React.Component {
     render() {
         return (
             <div className="about-content-section">
-                <h1 style={{marginTop: 0}}>MapStore</h1>
+                <h1 style={{marginTop: 0}}>Geoportale RSE</h1>
+
                 <p>
-                    <I18N.Message msgId="about_p0-0"/>
+                    <strong><I18N.Message msgId="about_p0-0"/></strong><br></br>
+                    <I18N.Message msgId="about_p0-1"/>
                 </p>
-                <p><I18N.HTML msgId="about_p1"/></p>
-                <h2><I18N.Message msgId="about_h20"/></h2>
                 <p>
-                    <I18N.Message msgId="about_p3"/>
+                    <strong><I18N.Message msgId="about_p1-0"/></strong><br></br>
+                    <I18N.HTML msgId="about_p1-1"/>
+                    <I18N.Message msgId="about_p1-2"/>
                 </p>
-                <p><I18N.HTML msgId="about_p5-0"/></p>
+                <p>
+                    <strong><I18N.Message msgId="about_p2-0"/></strong><br></br>
+                    <I18N.HTML msgId="about_p2-1"/>
+                </p>
+                <p><em>
+                    <I18N.Message msgId="about_cite0"/><br></br>
+                    <I18N.HTML msgId="about_cite1"/><br></br>
+                    <I18N.HTML msgId="about_cite2"/>
+                </em></p>
+
+                <p style={{fontSize: "0.85em"}}>
+                    <I18N.Message msgId="about_bottom1"/><br/><br/>
+                    <I18N.Message msgId="about_bottom2"/>
+                </p>
+
+                <div style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "20px",
+                    marginTop: "20px",
+                    marginBottom: "20px"
+                }}>
+                    <img
+                        src="product/assets/img/rds-logo.png"
+                        alt="RSE Ricerca di Sistema"
+                        style={{ maxHeight: "100px" }}
+                    />
+
+                    <I18N.HTML msgId="about_image2" />
+                </div>
+
             </div>);
     }
 }

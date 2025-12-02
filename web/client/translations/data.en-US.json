@@ -7,9 +7,19 @@
     "about_title": "About",
     "aboutTooltip": "About",
     "aboutLbl": "About",
-    "about_p0-0": "MapStore is an open-source WebGIS framework to build, manage and share maps and mashups. It can mix map content from various sources and supports multiple OGC standard formats. MapStore can be used to view, query, and integrate geospatial data, offering advanced features such as charts, dashboards, geostories as well as mapping capabilities on the web. Users can create and share resources in custom application contexts, with granular access permissions. It is both a product and a framework, licensed under Simplified BSD license, and it can work with different web mapping libraries, including OpenLayers, LeafletJS, and Cesium.",
-    "about_p0-1": "and",
-    "about_p1": "For more information you can consult the <a href='https://docs.mapstore.geosolutionsgroup.com/en/latest/'>online documentation</a>.",
+    "about_p0-0": "What is Geo-EnTer?",
+    "about_p0-1": "Geo-EnTer (Geoportal Energy and Territory) is a WebGIS application that constitutes the access point to a set of data about the energy system and its interaction with the territory. Thanks to a careful selection and organization of contents, Geo-EnTer offers a guided navigation experience among the main GIS products developed by RSE and, through interactive tools such as maps, dashboards and geostories, allows users to explore synthetic representations of peculiar aspects relevant for the national energy system.",
+    "about_p1-0": "What can you find inside?",
+    "about_p1-1": "<ul style='list-style-type: \"✔️ \";'><li><strong>Maps:</strong> Interactive thematic representations that summarize or result from analyses on a specific topic.</li><li><strong>Links:</strong> Connections to other GIS and WebGIS products developed by RSE.</li><li><strong>Dashboards:</strong> Interactive graphic dashboards that allow users to visualize and query maps, diagrams, and tables in relation to each other.</li><li><strong>GeoStories:</strong> Narrative journeys on specific themes, enriched with interactive maps and multimedia content.</li></ul>",
+    "about_p1-2": "🌍 The contents cover several areas: renewable energy sources, energy infrastructures, electric mobility, energy communities, territorial development potential, air quality, and climate change.",
+    "about_p2-0": "What do the different published contents have in common?",
+    "about_p2-1": "<ul><li>They are all based on cartographic data.</li><li>They focus on the development of renewable energy sources (RES) in the territory from different perspectives (resource availability, plant distribution, contextual elements).</li><li>They support energy planning at the system level, facilitating resource analysis, site identification, and impact assessment.</li></ul>",
+    "about_cite0": "For more information:",
+    "about_cite1": "A. Gargiulo, M. Aiello, L. Stucchi, M. Vergata e M. Volonterio, «Il geoportale RdS su FER e Territorio,» Ricerca di Sistema, RSE, n. <a href='https://www.rse-web.it/rapporti/il-geoportale-rds-su-fer-e-territorio/#'>21010331</a>, Milano, 2021.",
+    "about_cite2": "M. Aiello, I. Galbiati, G. Ronchetti, M.A. Vergata, &laquo;Strumenti WebGIS a supporto della pianificazione territoriale energetica&raquo;, Ricerca di Sistema, RSE, n. <a href='product/assets/docs/24011106.pdf' target='_blank' rel='noopener'>24011106</a>, Milano, 2024.",
+    "about_bottom1": "All the data presented (including those derived from statistical data) are provided for study and research purposes and do not in any way replace the statistical data produced by the appointed subjects, in the context of SISTAN (eg: ISTAT, GSE, TERNA ).",
+    "about_bottom2": "This work was funded by the Research Fund for the Electricity System as part of the Three-Year Plan 2025-2027 (DM MASE n.388, 06-11-2024), in compliance with the Ministerial Decree of 12 April 2024.",
+    "about_image2": "<a href='http://dbeta.rse-web.it/form_feedback_geoportale_2.php?language=EN&sito_web=geoportale' target='_blank' rel='noopener'><img src='product/assets/img/feedback_en.png' style='max-height:100px; height:auto;' /></a>",
     "about_ul0_li0": "MapViewer is a simple viewer of preconfigured maps (optionally stored in a database using GeoStore)",
     "about_ul0_li1": "MapPublisher has been developed to create, save and share in a simple and intuitive way maps and mashups created selecting contents coming from well-known sources like Google Maps and OpenStreetMap or from services provided by organizations using open protocols like OGC WMS, WFS, WMTS or TMS and so on. For more information check the",
     "about_h20": "License",
@@ -294,8 +304,8 @@
       "tooltipDeactivate": "Exit 3D Mode",
       "tooltipActivate": "Enter 3D Mode"
     },
-    "cookie": {
-      "info": "This website uses cookies to improve your experience. We'll assume you're ok with this, but you can opt-out if you wish.",
+    "cookie":{
+      "info": "This website uses cookies for the correct functioning and to improve the services included. If you want to continue browsing the site, you consent to the use of cookies by clicking Accept. If you do not want to receive cookies from the site, close this page.",
       "moreDetailsButton": "More Details",
       "leave": "Leave",
       "accept": "Accept"
@@ -395,7 +405,7 @@
     },
     "home": {
       "open": "Open",
-      "shortDescription": "<h1>Welcome to MapStore</h1><p>Modern webmapping with OpenLayers, Cesium, Leaflet and ReactJS.</p>",
+      "shortDescription": "<h1>Energy and Environment Geoportal</h1><p>The NEW RSE Geoportal</p><a href='http://www.rse-web.it/en/'>Visit RSE website</a>",
       "forkMeOnGitHub": "Fork me on GitHub",
       "description": "MapStore has been developed to create, save and share in a simple and intuitive way maps and mashups created selecting contents coming from well-known sources like OpenStreetMap, Google Maps or from services provided by organizations using open protocols like OGC WMS, WFS, WMTS or TMS and so on...<br/>Visit the <a href=\"https://mapstore.readthedocs.io/en/latest/\">home page</a> for more details.",
       "Applications": "Applications",
@@ -474,7 +484,10 @@
         "showDetails": "Show details"
       },
       "contents": {
-        "title": "Contents"
+        "title": "Contents",
+        "mapsTitle": "Maps",
+        "dashboardsTitle": "Dashboards",
+        "geostoriesTitle": "Geostories"
       },
       "dashboards": {
         "newDashboard": "New dashboard",
@@ -4686,6 +4699,8 @@
         "confirm": "Confirm",
         "cancel": "Cancel"
       }
-    }
+    },
+
+    "custom.footer.html": "<div style='text-align:center; padding:20px 0;'>\n  <a href='https://www.rse-web.it/en/' target='_blank'>\n    <img src='product/assets/img/RSE-logo.jpg' style='max-width:200px; height:auto; margin-bottom:10px;' alt='RSE'/>\n  </a>\n\n  <div style='margin-top:10px; color:#555; font-size:14px;'>\n <strong>Ricerca sul Sistema Energetico - RSE S.p.A.</strong> <a href=\"mailto:rse@legalmail.it\">rse@legalmail.it</a> <strong>Italia</strong>: +39 023992.1 <br> <a href=\"http://www.rse-web.it/en/privacy/\"target='_blank'>Privacy </a><a href=\"https://www.rse-web.it/en/cookie/\"target='_blank'> - Cookies</a></div>\n</div>"
   }
 }

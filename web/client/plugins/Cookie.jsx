@@ -25,7 +25,7 @@ import cookie from '../reducers/cookie';
   * @prop {string} declineUrl The url associated with the leave button
   */
 const Cookie = connect((state) => ({
-    show: state.cookie && state.cookie.showCookiePanel,
+    show: state.cookie?.showCookiePanel ?? true,
     html: state.cookie && state.cookie.html && state.cookie.html[state.locale && state.locale.current],
     seeMore: state.cookie && state.cookie.seeMore
 }), {

@@ -1,10 +1,10 @@
 /*
- * Copyright 2024, GeoSolutions Sas.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree.
- */
+* Copyright 2024, GeoSolutions Sas.
+* All rights reserved.
+*
+* This source code is licensed under the BSD-style license found in the
+* LICENSE file in the root directory of this source tree.
+*/
 
 import React from 'react';
 import { Glyphicon } from 'react-bootstrap';
@@ -18,7 +18,7 @@ import tooltip from '../../components/misc/enhancers/tooltip';
 import Spinner from '../../components/layout/Spinner';
 import PropTypes from 'prop-types';
 import MenuNavLink from './components/MenuNavLink';
-import src from '../../product/assets/img/logo.png';
+import src from '../../product/assets/img/RSE-logo.jpg';
 
 const ButtonWithTooltip = tooltip(Button);
 
@@ -140,9 +140,9 @@ BrandNavbarMenuItem.defaultProps = {
 *              "variant": "default"
 *          }
 *      ]
- *  }
- * }
- */
+*  }
+* }
+*/
 function BrandNavbar({
     size,
     variant,

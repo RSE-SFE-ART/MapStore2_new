@@ -94,7 +94,11 @@ class Cookie extends React.Component {
         </a>);
     }
     render() {
-        return this.props.show ? (
+        const visible = this.props.show ?? true; // nullish coalesce: undefined → true
+        console.log(this.props.show);
+        console.log(visible)
+
+        return visible ? (
             <div className={this.props.seeMore ? "mapstore-cookie-panel see-more" : "mapstore-cookie-panel not-see-more"}>
                 <div role="header" className="cookie-header" style={{height: this.props.seeMore ? "44px" : "0px"}}>
                     {this.props.seeMore ? <Glyphicon className="cookie-close-btn" glyph="1-close" onClick={() => this.props.onMoreDetails(false)}/> : null }
