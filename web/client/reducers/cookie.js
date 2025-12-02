@@ -12,8 +12,12 @@ import {
     SET_DETAILS_COOKIE_HTML
 } from '../actions/cookie';
 
+import { getApi } from '../api/userPersistedStorage';
+
+
 function cookie(state = {
-    html: {}
+    html: {},
+    showCookiePanel: !getApi().getItem("cookies-policy-approved")
 }, action) {
     switch (action.type) {
     case SET_COOKIE_VISIBILITY: {
