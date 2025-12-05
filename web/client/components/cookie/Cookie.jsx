@@ -65,7 +65,8 @@ class Cookie extends React.Component {
             (
                 <a style={{cursor: "pointer"}}
                     id="accept-cookie"
-                    href={this.props.externalCookieUrl}>
+                    href={this.props.externalCookieUrl}
+                    target="_blank">
                     <Button
                         className="cookie-button"
                         id="decline-cookie"
@@ -94,10 +95,7 @@ class Cookie extends React.Component {
         </a>);
     }
     render() {
-        const visible = this.props.show ?? true; // nullish coalesce: undefined → true
-        console.log(this.props.show);
-        console.log(visible)
-
+        const visible = this.props.show ?? true;
         return visible ? (
             <div className={this.props.seeMore ? "mapstore-cookie-panel see-more" : "mapstore-cookie-panel not-see-more"}>
                 <div role="header" className="cookie-header" style={{height: this.props.seeMore ? "44px" : "0px"}}>

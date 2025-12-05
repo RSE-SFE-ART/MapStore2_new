@@ -304,7 +304,7 @@
       "tooltipDeactivate": "Exit 3D Mode",
       "tooltipActivate": "Enter 3D Mode"
     },
-    "cookie":{
+    "cookie": {
       "info": "This website uses cookies for the correct functioning and to improve the services included. If you want to continue browsing the site, you consent to the use of cookies by clicking Accept. If you do not want to receive cookies from the site, close this page.",
       "moreDetailsButton": "More Details",
       "leave": "Leave",
