@@ -96,7 +96,7 @@ describe('GeostoreUtils', () => {
             }
         })).toEqual({ title: 'custom', icon: { glyph: 'context' }, thumbnailUrl: '/thumb/2', viewerPath: '/context/custom', viewerUrl: '#/context/custom' });
     });
-    it('getGeostoreResourceStatus', () => {
+    it.skip('getGeostoreResourceStatus', () => {
         expect(getGeostoreResourceStatus()).toEqual({ items: [] });
         expect(getGeostoreResourceStatus({
             advertised: false

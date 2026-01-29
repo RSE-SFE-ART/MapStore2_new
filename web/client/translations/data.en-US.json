@@ -15,7 +15,7 @@
     "about_p2-0": "What do the different published contents have in common?",
     "about_p2-1": "<ul><li>They are all based on cartographic data.</li><li>They focus on the development of renewable energy sources (RES) in the territory from different perspectives (resource availability, plant distribution, contextual elements).</li><li>They support energy planning at the system level, facilitating resource analysis, site identification, and impact assessment.</li></ul>",
     "about_cite0": "For more information:",
-    "about_cite1": "A. Gargiulo, M. Aiello, L. Stucchi, M. Vergata e M. Volonterio, «Il geoportale RdS su FER e Territorio,» Ricerca di Sistema, RSE, n. <a href='https://www.rse-web.it/rapporti/il-geoportale-rds-su-fer-e-territorio/#'>21010331</a>, Milano, 2021.",
+    "about_cite1": "A. Gargiulo, M. Aiello, L. Stucchi, M. Vergata e M. Volonterio, «Il geoportale RdS su FER e Territorio,» Ricerca di Sistema, RSE, n. <a target='_blank' href='https://www.rse-web.it/en/reports/the-system-research-geoportal-on-res-and-territory/'>21010331</a>, Milano, 2021.",
     "about_cite2": "M. Aiello, I. Galbiati, G. Ronchetti, M.A. Vergata, &laquo;Strumenti WebGIS a supporto della pianificazione territoriale energetica&raquo;, Ricerca di Sistema, RSE, n. <a href='product/assets/docs/24011106.pdf' target='_blank' rel='noopener'>24011106</a>, Milano, 2024.",
     "about_bottom1": "All the data presented (including those derived from statistical data) are provided for study and research purposes and do not in any way replace the statistical data produced by the appointed subjects, in the context of SISTAN (eg: ISTAT, GSE, TERNA ).",
     "about_bottom2": "This work was funded by the Research Fund for the Electricity System as part of the Three-Year Plan 2025-2027 (DM MASE n.388, 06-11-2024), in compliance with the Ministerial Decree of 12 April 2024.",
@@ -308,7 +308,8 @@
       "info": "This website uses cookies for the correct functioning and to improve the services included. If you want to continue browsing the site, you consent to the use of cookies by clicking Accept. If you do not want to receive cookies from the site, close this page.",
       "moreDetailsButton": "More Details",
       "leave": "Leave",
-      "accept": "Accept"
+      "accept": "Accept",
+      "moreDetailsURL": "https://www.rse-web.it/en/cookie/"
     },
     "background": "Background",
     "language": "Language",
@@ -405,7 +406,7 @@
     },
     "home": {
       "open": "Open",
-      "shortDescription": "<h1>Energy and Environment Geoportal</h1><p>The NEW RSE Geoportal</p><a href='http://www.rse-web.it/en/'>Visit RSE website</a>",
+      "shortDescription": "<h1>Energy and Environment Geoportal</h1><p>The RSE Geoportal</p><a target='_blank' href='http://www.rse-web.it/en/'>Visit RSE website</a>",
       "forkMeOnGitHub": "Fork me on GitHub",
       "description": "MapStore has been developed to create, save and share in a simple and intuitive way maps and mashups created selecting contents coming from well-known sources like OpenStreetMap, Google Maps or from services provided by organizations using open protocols like OGC WMS, WFS, WMTS or TMS and so on...<br/>Visit the <a href=\"https://mapstore.readthedocs.io/en/latest/\">home page</a> for more details.",
       "Applications": "Applications",
@@ -484,9 +485,9 @@
         "showDetails": "Show details"
       },
       "contents": {
-        "title": "Contents",
+        "title": "All Contents",
         "mapsTitle": "Maps",
-        "dashboardsTitle": "Dashboards",
+        "dashboardsTitle": "Atlases and Tools",
         "geostoriesTitle": "Geostories"
       },
       "dashboards": {

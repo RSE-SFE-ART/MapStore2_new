@@ -49,6 +49,19 @@ class Cookie extends React.Component {
         show: false
     };
 
+    // Funzione che va a prendere il link dal file di traduzione (passando per localconfig)
+    getExternalCookieUrl = () => {
+        const urlOrKey = this.props.externalCookieUrl;
+        if (!urlOrKey) return urlOrKey;
+
+        if (/^(https?:)?\/\//i.test(urlOrKey) || /^[a-z]+:/i.test(urlOrKey) || urlOrKey.startsWith("#")) {
+            return urlOrKey;
+        }
+
+        return (this.context && this.context.messages && urlOrKey.split('.').reduce((o, k) => o && o[k], this.context.messages)) || urlOrKey;
+    };
+
+
     renderAcceptButton = () => {
         return (
             <Button
@@ -65,7 +78,7 @@ class Cookie extends React.Component {
             (
                 <a style={{cursor: "pointer"}}
                     id="accept-cookie"
-                    href={this.props.externalCookieUrl}
+                    href={this.getExternalCookieUrl()}
                     target="_blank">
                     <Button
                         className="cookie-button"

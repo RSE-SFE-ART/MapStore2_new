@@ -80,7 +80,15 @@ class About extends React.Component {
             return (
                 <Dialog
                     id="mapstore-about"
-                    style={{zIndex: 1992, paddingTop: 0}}
+                    style={{
+                        zIndex: 1992,
+                        paddingTop: 0,
+                        width: '60vw',
+                        maxWidth: '60vw',
+                        left: '50%',
+                        right: 'auto',
+                        marginLeft: '-30vw'
+                    }}
                     modal
                     draggable
                 >
@@ -93,13 +101,13 @@ class About extends React.Component {
                         </button>
                     </span>
                     <div role="body">
-                        {this.props.showVersionInfo && <VersionInfo
+                        {/* {this.props.showVersionInfo && <VersionInfo
                             version={this.props.version}
                             message={this.props.message}
                             commit={this.props.commit}
                             date={this.props.date}
                             githubUrl={this.props.githubUrl}
-                        />}
+                        />}*/}
                         {this.props.showAboutContent && <AboutContent/>}
                     </div>
                 </Dialog>

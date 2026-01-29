@@ -395,9 +395,14 @@ function ResourcesGrid({
         grid: [
             {
                 path: 'name',
-                target: 'header'
+                target: 'header',
+                showFullContent: true
             },
             {
+                path: 'description',
+                showFullContent: true
+            }
+            /* {
                 path: 'tags',
                 filter: 'filter{tag.in}',
                 itemValue: 'name',
@@ -413,7 +418,7 @@ function ResourcesGrid({
                 noDataLabelId: 'resourcesCatalog.emptyUnknown',
                 disableIf: '{!state("userrole")}',
                 tooltipId: 'resourcesCatalog.columnCreatedBy'
-            }
+            }*/
         ]
     },
     resourceTypes = ["MAP", "DASHBOARD", "GEOSTORY", "CONTEXT"],

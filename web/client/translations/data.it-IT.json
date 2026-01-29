@@ -15,7 +15,7 @@
     "about_p2-0": "Cosa hanno in comune tra di loro i diversi contenuti pubblicati?",
     "about_p2-1": "<ul><li>Sono prodotti basati su dati cartografici</li><li>Riguardano lo sviluppo delle fonti di energia rinnovabile (FER) nel territorio sotto diversi punti di vista (disponibilità delle risorse, diffusione degli impianti, elementi di contesto)</li><li>Supportano la pianificazione energetica a livello di sistema, facilitando l'analisi delle risorse, l'identificazione delle aree e la valutazione degli impatti</li></ul>",
     "about_cite0": "Per saperne di più:",
-    "about_cite1": "A. Gargiulo, M. Aiello, L. Stucchi, M. Vergata e M. Volonterio, «Il geoportale RdS su FER e Territorio,» Ricerca di Sistema, RSE, n. <a href='https://www.rse-web.it/rapporti/il-geoportale-rds-su-fer-e-territorio/#'>21010331</a>, Milano, 2021.",
+    "about_cite1": "A. Gargiulo, M. Aiello, L. Stucchi, M. Vergata e M. Volonterio, «Il geoportale RdS su FER e Territorio,» Ricerca di Sistema, RSE, n. <a target='_blank' href='https://www.rse-web.it/rapporti/il-geoportale-rds-su-fer-e-territorio/#'>21010331</a>, Milano, 2021.",
     "about_cite2": "M. Aiello, I. Galbiati, G. Ronchetti, M.A. Vergata, &laquo;Strumenti WebGIS a supporto della pianificazione territoriale energetica&raquo;, Ricerca di Sistema, RSE, n. <a href='product/assets/docs/24011106.pdf' target='_blank' rel='noopener'>24011106</a>, Milano, 2024.",
     "about_bottom1": "Tutti i dati presentati (anche quelli derivati a partire da dati statistici) sono forniti a scopo di studio e di ricerca e non sostituiscono in alcun modo i dati statistici prodotti dai soggetti deputati, nell’ambito del SISTAN (es: ISTAT, GSE, TERNA).",
     "about_bottom2": "Questo lavoro è stato finanziato dal Fondo di Ricerca per il Sistema Elettrico nell’ambito del Piano Triennale 2025-2027 (DM MASE n.388, 06-11-2024), in ottemperanza al DM 12 aprile 2024.",
@@ -307,7 +307,8 @@
       "info": "Questo sito utilizza cookie per il corretto funzionamento e per il miglioramento dei servizi inclusi. Se vuoi continuare la navigazione del sito acconsenti all'uso dei cookie cliccando Accetto. Se non vuoi ricevere cookie dal sito, chiudi la presente pagina.",
       "moreDetailsButton": "Più dettagli",
       "leave": "Lascia il sito",
-      "accept": "Accetto"
+      "accept": "Accetto",
+      "moreDetailsURL": "https://www.rse-web.it/cookie/"
     },
     "background": "Sfondo",
     "language": "Lingua",
@@ -404,7 +405,7 @@
     },
     "home": {
       "open": "Apri",
-      "shortDescription": "<h1>Geoportale Energia e Territorio</h1><p>Il NUOVO Geoportale DI PROVA di RSE</p><a href='http://www.rse-web.it/'>Visita il sito di RSE</a>",
+      "shortDescription": "<h1>Geoportale Energia e Territorio</h1><p>Il Geoportale di RSE</p><a href='http://www.rse-web.it/' target='_blank'>Visita il sito di RSE</a>",
       "forkMeOnGitHub": "Fork me on GitHub",
       "description": "MapStore è sviluppato per creare, salvare e condividere in modo semplice ed intuitivo mappe e mashup creati selezionando contenuti da server come Google Maps, OpenStreetMap, MapQuest o da server specifici forniti dalla propria organizzazione o da terzi. <br/> Visita la <a href=\"https://mapstore.readthedocs.io/en/latest/\">home page</a> per maggiori dettagli.",
       "Applications": "Applicazioni",
@@ -483,9 +484,9 @@
         "showDetails": "mostra dettagli"
       },
       "contents": {
-        "title": "Contenuti",
+        "title": "Tutti i Contenuti",
         "mapsTitle": "Mappe",
-        "dashboardsTitle": "Dashboard",
+        "dashboardsTitle": "Atlanti e Strumenti",
         "geostoriesTitle": "Geostorie"
       },
       "dashboards": {

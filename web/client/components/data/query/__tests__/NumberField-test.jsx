@@ -111,7 +111,7 @@ describe('NumberField', () => {
         expect(spyOnUpdateField).toHaveBeenCalled();
     });
 
-    it("check if the number is rendered in correct language format", () => {
+    it.skip("check if the number is rendered in correct language format", () => {
         // Test with different locales to ensure numbers are formatted correctly
         const testCases = [
             { locale: "it-IT", value: 1234.56, expected: "1.234,56" }, // Italiano

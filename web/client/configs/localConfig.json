@@ -377,7 +377,7 @@
       {
         "name": "Cookie",
         "cfg": {
-          "externalCookieUrl": "https://www.rse-web.it/cookie/",
+          "externalCookieUrl": "cookie.moreDetailsURL",
           "declineUrl": "http://www.google.com"
         }
       },
@@ -618,7 +618,7 @@
       {
         "name": "Cookie",
         "cfg": {
-          "externalCookieUrl": "https://www.rse-web.it/cookie/",
+          "externalCookieUrl": "cookie.moreDetailsURL",
           "declineUrl": "http://www.google.com"
         }
       },
@@ -856,6 +856,7 @@
         "cfg": {
           "id": "catalog",
           "titleId": "resources.contents.title",
+          "cardLayoutStyle": "grid",
           "queryPage": true,
           "menuItems": [
             {
@@ -970,7 +971,7 @@
       {
         "name": "Cookie",
         "cfg": {
-          "externalCookieUrl": "https://www.rse-web.it/cookie/",
+          "externalCookieUrl": "cookie.moreDetailsURL",
           "declineUrl": "http://www.google.com"
         }
       }

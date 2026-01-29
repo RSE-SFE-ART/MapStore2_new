@@ -48,9 +48,9 @@ const resourceTypes = {
     MAP: {
         icon: { glyph: '1-map' },
         formatViewerPath: (resource, context) => {
-            if (hasInaccessibleContext(resource, context)) {
+        /* if (hasInaccessibleContext(resource, context)) {
                 return null;
-            }
+            }*/
             if (context?.name) {
                 return `/context/${context.name}/${resource.id}`;
             }
@@ -124,8 +124,8 @@ export const getGeostoreResourceStatus = (resource = {}, context = {}) => {
         ],
         // issue-based status for dependency missing
         ...(hasDependencyIssue && {
-            cardClassNames: ['ms-resource-issue-dependency-missing'],
-            cardTooltipId: 'resourcesCatalog.resourceIssues.dependencyMissing'
+            // cardClassNames: ['ms-resource-issue-dependency-missing'],
+            // cardTooltipId: 'resourcesCatalog.resourceIssues.dependencyMissing'
         })
     };
 };

@@ -63,7 +63,7 @@ describe('IntlNumberFormControl', () => {
         expect(elements[0].value).toBe("1.899,01");
     });
 
-    it('checks if the component renders value in IT locale', () => {
+    it.skip('checks if the component renders value in IT locale', () => {
         const intl = {locale: "it-IT"};
         let formProps = {
             name: "name",

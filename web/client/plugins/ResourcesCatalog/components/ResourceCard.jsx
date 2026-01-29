@@ -112,6 +112,28 @@ const ResourceCardWrapper = ({
     );
 };
 
+const SOFT_HYPHEN = '\u00AD';
+
+// Funzione per aggiungere '-' quando si va a capo
+function injectSoftHyphens(text, maxChunk = 1) {
+    if (typeof text !== 'string') {
+        return text;
+    }
+
+    return text
+        .split(/(\s+)/)
+        .map(part => {
+            if (part.length > maxChunk && !/\s/.test(part)) {
+                return part
+                    .match(new RegExp(`.{1,${maxChunk}}`, 'g'))
+                    .join(SOFT_HYPHEN);
+            }
+            return part;
+        })
+        .join('');
+}
+
+
 const ResourceCardMetadataValue = tooltip(({
     value,
     entry,
@@ -140,6 +162,30 @@ const ResourceCardMetadataValue = tooltip(({
 
     const properties = getProperties();
 
+    // Se la parola deve essere spezzata, la scrivo tutta a capo
+    // Se la parola è insolitamente lunga (>40 caratterei), la spezzo con '-' (non funziona con firefox)
+    function renderWholeWords(text, breakLongWords = false, maxLength = 40) {
+        if (typeof text !== 'string') return text;
+
+        return text.split(/(\s+)/).map((part, i) => {
+            if (/\s+/.test(part)) return part;
+
+            if (breakLongWords && part.length > maxLength) {
+                return (
+                    <span key={i}>
+                        {injectSoftHyphens(part)}
+                    </span>
+                );
+            }
+
+            return (
+                <span key={i} style={{ display: 'inline-block' }}>
+                    {part}
+                </span>
+            );
+        });
+    }
+
     return (
         <ALink
             {...props}
@@ -155,7 +201,9 @@ const ResourceCardMetadataValue = tooltip(({
         >
             {entry.type === 'date' && entry.format && properties.value
                 ? moment(properties.value).format(entry.format)
-                : properties.value}
+                : (entry.showFullContent
+                    ? renderWholeWords(String(properties.value ?? ''), true, 40)
+                    : properties.value)}
         </ALink>
     );
 });
@@ -255,9 +303,9 @@ const ResourceCardGridBody = ({
                 <FlexBox className="ms-resource-card-body-header" gap="sm" centerChildrenVertically>
                     <FlexBox.Fill flexBox>
                         <Text fontSize="md" ellipsis={!headerEntry.showFullContent}>
-                            {((icon || headerEntry?.icon) && !loading) && (
+                            {/* {((icon || headerEntry?.icon) && !loading) && (
                                 <><Glyphicon {...(icon || headerEntry?.icon)} />{' '}</>
-                            )}
+                            )}*/}
                             {(loading) && <><Spinner />{' '}</>}
                             {headerEntry?.path ? <ResourceCardMetadataValue
                                 entry={headerEntry}
@@ -296,34 +344,51 @@ const ResourceCardGridBody = ({
                             query={query}
                         /> : null}
                     </FlexBox.Fill>
-                    <FlexBox className="ms-resource-card-buttons" classNames={['_relative']} gap="xs">
-                        {buttons.map(({ Component, name }) => {
-                            return (
-                                <Component
-                                    key={name}
-                                    resource={resource}
-                                    viewerUrl={viewerUrl}
-                                    component={ResourceCardButton}
-                                    readOnly={readOnly}
-                                    target={target}
-                                />
-                            );
-                        })}
-                    </FlexBox>
                 </FlexBox>
             </FlexBox.Fill>
-            {!readOnly && options?.length > 0
-                ? (
-                    <ResourceCardActionButtons
-                        resource={resource}
-                        viewerUrl={viewerUrl}
-                        options={options}
-                        readOnly={readOnly}
-                        target={target}
+            {!readOnly ? (
+                <>
+                    {(icon && !loading) ? (
+                        <div
+                            className="_absolute _margin-sm _corner-tl"
+                            style={{ pointerEvents: 'none' }}
+                        >
+                            <Text fontSize="lg"><Glyphicon {...icon} /></Text>
+                        </div>
+                    ) : null}
+
+                    <FlexBox
                         className="_absolute _margin-sm _corner-tr"
-                    />
-                )
-                : null}
+                        gap="xs"
+                        centerChildrenVertically
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        {options?.length > 0 ? (
+                            <ResourceCardActionButtons
+                                resource={resource}
+                                viewerUrl={viewerUrl}
+                                options={options}
+                                readOnly={readOnly}
+                                target={target}
+                                className=""
+                            />
+                        ) : null}
+
+                        {buttons.map(({ Component, name }) => (
+                            <Component
+                                key={name}
+                                resource={resource}
+                                viewerUrl={viewerUrl}
+                                component={ResourceCardButton}
+                                readOnly={readOnly}
+                                target={target}
+                                square
+                                borderTransparent
+                            />
+                        ))}
+                    </FlexBox>
+                </>
+            ) : null}
         </FlexBox.Fill>
     );
 };

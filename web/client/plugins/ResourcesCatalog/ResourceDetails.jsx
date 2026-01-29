@@ -132,6 +132,7 @@ function ResourceDetails({
             "type": "tab",
             "id": "info",
             "labelId": "resourcesCatalog.info",
+            "disableIf": "{!state('userrole') || !state('resourceCanEdit')}",
             "items": [
                 {
                     "type": "text",
@@ -364,7 +365,8 @@ function BrandNavbarDetailsButton({
     resourceType,
     onSelect,
     onShow,
-    show
+    show,
+    user
 }) {
 
     if (!resourceType) {
@@ -379,21 +381,23 @@ function BrandNavbarDetailsButton({
     const { title } = getResourceInfo(resource || selectedResource);
     return (
         <FlexBox component="li" centerChildrenVertically gap="xs">
-            <ButtonWithTooltip
-                active={show}
-                square
-                tooltipId="resourcesCatalog.viewResourceProperties"
-                tooltipPosition="bottom"
-                onClick={() => {
-                    if (resource) {
-                        onSelect(resource);
-                    }
-                    onShow(true);
-                }}
-                borderTransparent
-            >
-                <Glyphicon glyph="details" />
-            </ButtonWithTooltip>
+            {(resourceType === 'MAP' || user?.role) && (
+                <ButtonWithTooltip
+                    active={show}
+                    square
+                    tooltipId="resourcesCatalog.viewResourceProperties"
+                    tooltipPosition="bottom"
+                    onClick={() => {
+                        if (resource) {
+                            onSelect(resource);
+                        }
+                        onShow(true);
+                    }}
+                    borderTransparent
+                >
+                    <Glyphicon glyph="details" />
+                </ButtonWithTooltip>
+            )}
             <Text ellipsis>
                 {title}
             </Text>
@@ -417,14 +421,20 @@ export default createPlugin('ResourceDetails', {
             position: 2,
             Component: connect(
                 createStructuredSelector({
-                    selectedResource: getSelectedResource
+                    selectedResource: getSelectedResource,
+                    user: userSelector
                 }),
                 {
                     onSelect: setSelectedResource,
                     onShow: setShowDetails
                 }
-            )(({ resourcesGridId, resource, onSelect, component, selectedResource, onShow }) => {
+            )(({ resourcesGridId, resource, onSelect, component, selectedResource, onShow, user }) => {
                 const Component = component;
+                const userrole = user?.role;
+                // Pulsante disabilitato se non è una mappa e non si è loggati
+                if (resource?.category?.name !== 'MAP' && !userrole) {
+                    return null;
+                }
                 function handleClick() {
                     if (selectedResource?.id !== resource?.id) {
                         onSelect(resource, resourcesGridId);
