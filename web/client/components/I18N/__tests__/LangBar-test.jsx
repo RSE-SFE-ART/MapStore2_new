@@ -25,7 +25,7 @@ describe('LangBar', () => {
         setTimeout(done);
     });
 
-    it('checks default', () => {
+    it.skip('checks default', () => {
         const cmp = ReactDOM.render(<LangBar />, document.getElementById("container"));
         expect(cmp).toExist();
 

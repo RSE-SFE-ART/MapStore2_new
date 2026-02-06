@@ -42,6 +42,9 @@ class FlagButton extends React.Component {
             imgSrc = require('./images/flags/' + this.props.code + '.png');
         } catch (e) {
             imgSrc = null;
+            if (this.props.code === 'it-IT2.0') {
+                imgSrc = require('./images/flags/' + 'it-IT' + '.png');
+            }
         }
         return imgSrc ? (<OverlayTrigger key={"overlay-" + this.props.code} overlay={tooltip} placement={this.props.tooltipPlacement}>
             {
