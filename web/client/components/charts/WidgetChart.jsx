@@ -162,7 +162,8 @@ const chartDataTypes = {
                         legendgrouptitle: {
                             text: classificationDataKey === valueDataKey ? classificationDataKey : `${valueDataKey} | ${classificationDataKey}`
                         },
-                        hovertemplate: `%{label}<br>${classificationDataKey}<br>%{value}<br>%{percent}<extra></extra>`,
+                        // hovertemplate: `%{label}<br>${classificationDataKey}<br>%{value}<br>%{percent}<extra></extra>`, Vecchia versione che mette anche count()
+                        hovertemplate: `%{label}<br>%{value}<br>%{percent}<extra></extra>`,
                         hoverlabel: {
                             font: {
                                 color: layout.color || FONT.COLOR,
@@ -197,7 +198,8 @@ const chartDataTypes = {
                         size: layout?.fontSize || FONT.SIZE
                     }
                 },
-                hovertemplate: `%{label}<br>${valueDataKey}<br>${tickPrefix ?? ""}%{value${format ? `:${format}` : ''}}${tickSuffix ?? ""}<br>%{percent}<extra></extra>`,
+                // hovertemplate: `%{label}<br>${valueDataKey}<br>${tickPrefix ?? ""}%{value${format ? `:${format}` : ''}}${tickSuffix ?? ""}<br>%{percent}<extra></extra>`,
+                hovertemplate: `%{label}<br>${tickPrefix ?? ""}%{value${format ? `:${format}` : ''}}${tickSuffix ?? ""}<br>%{percent}<extra></extra>`,
                 domain,
                 labels: outerLabels,
                 ...(isNestedPieChart && {
@@ -578,6 +580,12 @@ export const toPlotly = (_props) => {
                 "groupclick": "toggleitem"
             }} : {}),
             hovermode: 'x unified',
+            // forzare un font diverso "forza" a ricalcolare la dimensione del box e risolve il problema per cui il testo venisse tagliato a metà
+            hoverlabel: {
+                font: {
+                    family: 'Arial, sans-serif'
+                }
+            },
             uirevision: true,
             shapes: [...(layout?.shapes || [])],
             ...gridProperty
