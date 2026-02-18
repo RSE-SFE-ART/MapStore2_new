@@ -292,6 +292,7 @@
         "name": "Identify",
         "showIn": ["Settings"],
         "cfg": {
+          "maxItems": 100,
           "showFullscreen": true,
           "position": "bottom",
           "disableInfoAlert": true,
@@ -442,6 +443,7 @@
       {
         "name": "Identify",
         "cfg": {
+          "maxItems": 100,
           "showHighlightFeatureButton": true,
           "viewerOptions": {
             "container": "{context.ReactSwipe}"
@@ -714,6 +716,7 @@
       {
         "name": "Identify",
         "cfg": {
+          "maxItems": 100,
           "showInMapPopup": true,
           "viewerOptions": {
             "container": "{context.ReactSwipe}"
