@@ -16,6 +16,7 @@ import TextWizardComp from '../../components/widgets/builder/wizard/TextWizard';
 import BuilderHeader from './BuilderHeader';
 import { wizardSelector, wizardStateToProps } from './commons';
 import withExitButton from './enhancers/withExitButton';
+import { isLoggedIn } from '../../selectors/security';
 
 const Toolbar = compose(
     connect(wizardSelector, {
@@ -36,7 +37,10 @@ const Toolbar = compose(
 )(ToolbarComp);
 
 const Builder = connect(
-    wizardSelector,
+    (state) => ({
+        ...wizardSelector(state),
+        isLoggedIn: isLoggedIn(state)
+    }),
     {
         onChange: onEditorChange
     },
