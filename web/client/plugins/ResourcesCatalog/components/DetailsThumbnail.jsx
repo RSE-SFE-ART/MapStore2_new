@@ -58,6 +58,7 @@ function DetailsThumbnail({
                         onUpdate={(data) => {
                             onChange(data);
                         }}
+                        /* Questo pezzo è quello che "taglia" l'immagine quando viene caricata
                         thumbnailOptions={{
                             contain: false,
                             width,
@@ -65,6 +66,7 @@ function DetailsThumbnail({
                             type: 'image/jpg',
                             quality: 0.5
                         }}
+                        */
                     />
                     <FlexBox className="_absolute _margin-sm _corner-tl">
                         <ButtonWithToolTip
