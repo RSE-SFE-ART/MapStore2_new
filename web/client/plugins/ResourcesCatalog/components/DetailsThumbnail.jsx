@@ -22,8 +22,8 @@ function DetailsThumbnail({
     icon,
     editing,
     thumbnail: thumbnailProp,
-    width,
-    height,
+    // width,
+    // height, Tolti anche da qui perché se no, compilando, prettier scartavetra i maroni
     onChange,
     resource
 }) {
