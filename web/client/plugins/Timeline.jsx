@@ -194,12 +194,12 @@ const TimelinePlugin = compose(
         items,
         options,
         setOptions,
-        mapSync,
-        toggleMapSync = () => {},
+        // mapSync,
+        // toggleMapSync = () => {},
         currentTime,
         setCurrentTime,
         offsetEnabled,
-        onOffsetEnabled,
+        // onOffsetEnabled,
         currentTimeRange,
         setOffset,
         style,
@@ -323,6 +323,7 @@ const TimelinePlugin = compose(
                                 active: !hideLayersName,
                                 onClick: () => setOptions({ ...options, hideLayersName: !hideLayersName })
                             },
+                            /*
                             {
                                 glyph: 'time-offset',
                                 bsStyle: offsetEnabled ? 'success' : 'primary',
@@ -331,7 +332,6 @@ const TimelinePlugin = compose(
                                 tooltip: <Message msgId={!offsetEnabled ? "timeline.enableRange" : "timeline.disableRange"} />,
                                 onClick: () => {
                                     if (status !== "PLAY") onOffsetEnabled(!offsetEnabled);
-
                                 }
                             },
                             {
@@ -341,6 +341,7 @@ const TimelinePlugin = compose(
                                 active: mapSync,
                                 onClick: () => toggleMapSync(!mapSync)
                             },
+                            */
                             {
                                 glyph: offsetEnabled ? "resize-horizontal" : "time",
                                 visible: !!resetButton,
